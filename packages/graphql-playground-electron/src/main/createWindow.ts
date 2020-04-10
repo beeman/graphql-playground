@@ -62,7 +62,9 @@ export function createWindow(windowContext: WindowContext) {
   // })
 
   windowContext.readyWindowsPromises[newWindow.id] = new Promise(resolve =>
-    ipcMain.once('ready', resolve),
+    ipcMain.once('ready', (event, args) => {
+      resolve()
+    }),
   )
 
   return newWindow

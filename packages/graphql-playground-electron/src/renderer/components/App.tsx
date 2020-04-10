@@ -429,22 +429,23 @@ class App extends React.Component<ReduxProps, State> {
   }
 
   showOpenDialog() {
-    dialog.showOpenDialog(
-      {
-        title: 'Choose a .graphql file to edit',
-        properties: ['openFile'],
-        // filters: [{
-        //   name: '*',
-        //   extensions: ['graphql']
-        // }]
-      },
-      fileNames => {
-        if (fileNames && fileNames.length > 0) {
-          const file = fileNames[0]
-          this.openFile(file)
-        }
-      },
-    )
+    console.log('showOpenDialog on dialog', dialog)
+    // dialog.showOpenDialog(
+    //   {
+    //     title: 'Choose a .graphql file to edit',
+    //     properties: ['openFile'],
+    //     // filters: [{
+    //     //   name: '*',
+    //     //   extensions: ['graphql']
+    //     // }]
+    //   },
+    //   fileNames => {
+    //     if (fileNames && fileNames.length > 0) {
+    //       const file = fileNames[0]
+    //       this.openFile(file)
+    //     }
+    //   },
+    // )
   }
 
   getSaveFileName(): Promise<string> {

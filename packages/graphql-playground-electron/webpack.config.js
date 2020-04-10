@@ -103,6 +103,6 @@ module.exports = {
   ],
   resolve: {
     modules: [path.resolve('./src'), 'node_modules'],
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.mjs','.ts', '.tsx', '.js'],
   },
 }

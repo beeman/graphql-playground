@@ -164,7 +164,7 @@ export const buildTemplate = (
         },
       },
       { type: 'separator' },
-      { label: 'Toggle Developer Tools', role: 'toggledevtools' },
+      { label: 'Toggle Developer Tools', role: 'toggleDevTools' },
     ],
   },
 ]

@@ -58,13 +58,13 @@ const startAppUpdates = () => {
     log.info('Checking for app updates...')
   })
 
-  autoUpdater.on('update-downloaded', () => {
+  autoUpdater.on('update-downloaded', async () => {
     log.info('Update downloaded')
-    const buttonIndex = dialog.showMessageBox({
+    const buttonIndex = await dialog.showMessageBox({
       message: `Update downloaded. Install now?`,
       buttons: ['Install Update & Restart', 'Later'],
     })
-    if (buttonIndex === 0) {
+    if (buttonIndex.response === 0) {
       autoUpdater.quitAndInstall()
       app.quit()
     }
